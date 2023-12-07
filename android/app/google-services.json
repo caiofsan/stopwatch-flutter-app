@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "601153263178",
+    "project_id": "stopwatch-flutter-bc0cf",
+    "storage_bucket": "stopwatch-flutter-bc0cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601153263178:android:386456cbe8d24eafbe38b3",
+        "android_client_info": {
+          "package_name": "com.example.stopwatch_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi4gQjtWop_BdueAcDUdefikVaILREazE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
