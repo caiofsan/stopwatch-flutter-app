@@ -75,10 +75,36 @@ class _HistoryScreenState extends State<HistoryScreen> {
                         itemBuilder: (context, index) {
                           String id = data.docs[index].id;
                           dynamic item = data.docs[index].data();
+                          double rtime = item['runtime'] / 1000;
+                          Timestamp timestp = item['timestp'];
+
                           return Card(
                               child: ListTile(
                             leading: Icon(Icons.run_circle_outlined),
-                            title: Text(item['timestp'].toString()),
+                            title: Text(timestp.toDate().toString()),
+                            subtitle: Row(
+                              children: [
+                                // TEMPO DE EXERCÍCIO
+                                Icon(Icons.watch_later_outlined),
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Text('Tempo: ${rtime.toString()} seg'),
+
+                                SizedBox(
+                                  width: 15.0,
+                                ),
+
+                                // VOLTAS
+                                Icon(Icons.refresh),
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Text('Voltas: ${item['laps'].toString()}'),
+                              ],
+                            ),
+                            onLongPress: () =>
+                                RecordController().deleteRecord(context, id),
                           ));
                         },
                       );
